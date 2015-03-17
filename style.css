@@ -41,6 +41,18 @@ button {
 	float: right;
 }*/
 
+.navbar .navbar-default {
+	min-width: 100%;
+}
+
+.mainBody {
+	background-color: white;
+	min-width: 60%;
+	min-height: 75%;
+	position: relative;
+
+}
+
 .stone {
 	background-color: #3A3C3A;
 	position: fixed;
