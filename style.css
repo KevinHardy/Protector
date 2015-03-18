@@ -8,41 +8,26 @@ html, body {
 	background-size: cover;
 }
 
-button {
+/*button {
 	margin-left: 10px;
 	margin-right: 10px;
-}
-
-/*.topBar {
-	position: fixed;
-	width: 80%;
-	min-height: 25px;
-	margin-top: -25px;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-bottom: 10%;
-	justify-content: space-between;
-	display: inline;
-	float: left;
-	padding: 20px 10px 10px 10px;
-	vertical-align: center;
-	opacity: 0.8;
-	border-radius: 15px;
-}
-
-.menuBar {
-	float: left;
-	vertical-align: middle;
-	justify-content: space-between;
-}
-
-.menuBarRight {
-	text-align: right;
-	float: right;
 }*/
 
-.navbar .navbar-default {
-	min-width: 100%;
+a {
+	font-size: 22px;
+	margin-left: 25px;
+}
+
+.navbar {
+	min-width: 102%;
+}
+
+.navbar-brand {
+	font-family: Nyala, "Times New Roman", serif, sans-serif;
+}
+
+.navbar-left {
+	width: 100%;
 }
 
 .mainBody {
@@ -50,13 +35,11 @@ button {
 	min-width: 60%;
 	min-height: 75%;
 	position: relative;
-
 }
 
 .stone {
 	background-color: #3A3C3A;
 	position: fixed;
-	float: left;
 	margin: -10px;
 	padding: 20px;
 	vertical-align: center;
