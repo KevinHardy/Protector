@@ -8,14 +8,16 @@ html, body {
 	background-size: cover;
 }
 
-/*button {
-	margin-left: 10px;
-	margin-right: 10px;
-}*/
 
+/*NavBar code*/
 a {
 	font-size: 22px;
 	margin-left: 25px;
+}
+
+.btn, .btn-default, .navbar-btn {
+	/*margin-left: 5%;*/
+	margin-right: 50px;
 }
 
 .navbar {
@@ -30,11 +32,17 @@ a {
 	width: 100%;
 }
 
+.fbPadding {
+	padding-right: 3%;
+}
+/*End NavBar Code*/
+
 .mainBody {
-	background-color: white;
-	min-width: 60%;
-	min-height: 75%;
-	position: relative;
+	background-color: #3A3C3A;
+	color: white;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
 }
 
 .stone {
