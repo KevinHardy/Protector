@@ -10,10 +10,10 @@ html, body {
 
 
 /*NavBar code*/
-a {
-	font-size: 40px;
+/*a {
+	font-size: 14px;
 	margin-left: 25px;
-}
+}*/
 
 .btn, .btn-default, .navbar-btn {
 	/*margin-left: 5%;*/
@@ -34,6 +34,7 @@ a {
 
 .fbPadding {
 	padding-right: 3%;
+	font-size: 35px;
 }
 /*End NavBar Code*/
 

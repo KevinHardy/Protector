@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
 
 	$routeProvider
 	.when('/', {
-		templateUrl: 'index.html',
+		templateUrl: '/homeTmpl.html',
 		controller: 'mainCtrl'
 	})
 	.when('/shop', {
