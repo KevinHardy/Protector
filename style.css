@@ -11,7 +11,7 @@ html, body {
 
 /*NavBar code*/
 a {
-	font-size: 22px;
+	font-size: 40px;
 	margin-left: 25px;
 }
 
@@ -43,6 +43,18 @@ a {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 5%;
+	opacity: 0.8;
+}
+
+.title {
+	text-align: center;
+	color: black;
+	font-family: Nyala, "Times New Roman", serif, sans-serif;
+	border-bottom: 4px solid black;
+}
+
+p {
+	font-size: 12px;
 }
 
 .stone {

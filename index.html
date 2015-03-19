@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ProtectorApp">
 	<head>
 		<title>Protector Series</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -9,22 +9,11 @@
 	</head>
 	<body>
 
-<!-- 	<div class="stone">
-			<div class="row">
-				<div class="col-md-8">
-					<input placeholder="E-mail" type="text" ng-model="username" required>
-					<input placeholder="Password" type="password" ng-model="password">
-					<button ng-click="logIn(username, password)">Log In</button>
-					<button ng-click="register(username, password)">Register</button>
-				</div>
-			</div>
-		</div> -->
-
 		<!-- Navbar code -->
  		<nav class="navbar navbar-default stone">
 			<div class="container-fluid">
 				<div class="navbar-header navbar-left">
-					<a class="navbar-brand" href="#">K.M. Hardy</a>
+					<a class="navbar-brand" href="#/">K.M. Hardy</a>
 					<!-- Sign in button goes to sign in page -->
 					<button type="button" class="btn btn-default navbar-btn">Sign in</button>
 
@@ -32,7 +21,7 @@
 					<button type="button" class="btn btn-default navbar-btn">Forum</button>
 
 					<!-- Shop Button goes to shop page -->
-					<button type="button" class="btn btn-default navbar-btn">Shop</button>
+					<button type="button" class="btn btn-default navbar-btn"><a href="#/shop">Shop</a></button>
 
 					<!-- Links to facebook and twitter -->
 					<a class="navbar-right fbPadding" href="https://www.facebook.com/Protectorfanzsite"><i class="fa fa-facebook"></i></a>
@@ -42,16 +31,42 @@
 		</nav>
 		<!-- End Navbar code -->
 
+		<div class="view-container">
+		      <ng-view></ng-view>
+    	</div>
 
-
+		<!-- Main body code, home pageincludes name of book, synopsis, and character bios -->
 		<div class="mainBody">
+			<h1 class="title">Protector</h1>
+
+			<h4><u>Character Bios</u></h4>
+			<h5><em>Alice Kendall</em>:</h5>
 			<p>
-				Protector Content here
+				Born and raised in Bridger, Montana, Alice Kendall lived her life in the loving home and arms of her parents: Grant and Emily Kendall. She graduated from Jeffries High, home of the Black Bears, and had plans to move to college out of state to study Business when her parents were, tragically, killed in a mysterious fire that consumed their whole house. As the only survivor of the fire, Alice was immediately taken under the wing of her families long time close friend, and self appointed adopted grandfather, Craig Thomas Ralph. Since the fire, Alice moved into the families guest house that was located on their small ranch and began working with her best friend Sally at Josie's Diner in the heart of Bridger.
 			</p>
+			<h5><em>Mac</em>:</h5>
+			<p>
+				A close Canine friend to Alice and destined Protector to her, Mac had been watching Alice's family since the day she was born and swore to himself that he would always be there to protect her from any harm. Hundreds of years old, and living through many battles with werewolves and mankind, he's very faithful to Artemis' cause and always sought out any lonely and stray humans to look after. When Alice was born, he felt and unbelievable urge to find her and ran away from his former master to track her down. Watching from a distance, he kept track of the Kendall's until he smelled a nearby werewolf and left his watch to hunt it down. By the time he had returned, the Kendall's house had been burned down and Alice was the only survivor. From that moment on, he swore to himself he would never leave her side.
+			</p>
+			<h5><em>Sheriff Ralph</em>:</h5>
+			<p>
+				Craig Ralph was brought up in Billings, Montana and always had a fascination for law enforcement. This prompted him to join the police academy in his twenties after he married his high school sweetheart Bonnie Johnson. A few years after graduation, the city became too crowded for the Ralphs which inspired them to move to Bridger where he was made a Deputy for the Sheriff. Not able to have children, Craig invested himself in his work and in making his wife happy until her tragic death from a car accident after being married for almost 30 years. Her death took its toll on him and he began to take up drinking until, five years after Bonnie's death, his deputy Grant Kendall invited him to Sunday dinners. His first dinner at the Kendall's home, their young daughter Alice gave him a sunflower she had picked and he instantly fell into a deep, paternal love with her and took her under his wing as his granddaughter. 
+			</p>
+			<h5><em>Manny Newman</em>:</h5>
+			<p>
+				Orphaned at 5, Manny was raised by his Aunt in Bridger. Left completely unsupervised most of the time, he began playing tricks on people throughout town which eventually led to misdemeanor offenses. However, as a minor, he was always sentenced to community service to make up for his crimes. When he turned 21, his aunt threw him out of the house and told him he needed to find some work and take care of himself and he was shown pity by Grant Kendall. Taking a job as a hired hand, and moving into the guest house on the Kendall's ranch, Manny set his sights on their daughter Alice when she had barely turned 18. Caught in the act of stealing the Kendall's silver and one of Emily's paintings, Grant Kendall fired him and he was run out of town. He made his way to Minneapolis, Minnesota where he fell into the hands of a local gang leader through a pool hustle. He was saved by a mysterious man with piercing green eyes who paid off his debt with the understanding that Manny would work for him. Grateful to not be in the debt of a gangster anymore, Manny took the agreement without question.
+			</p>
+			<h5><em>Sally Natter</em>:</h5>
+			<p>
+				Coming from a broken home, Sally found comfort in the with her high school sweetheart Billy Natter since the 10th grade. 6 weeks after the start of their senior year, she learned that she was going to be a mother and Billy married her instantly. Just before graduation, she gave birth to her son Jason Natter. Erasing any hopes of going to college with her best friend, she graduated from high school and started working at Josie's Diner to help support her family. 
+			</p>
+
 		</div>
+		<!-- end main body code -->
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
