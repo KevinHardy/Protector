@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="C:\Users\Kevin\Desktop\Dev Mountain\font-awesome-4.2.0\css/font-awesome.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
 
@@ -20,24 +20,26 @@
 					<!-- button to forum -->
 					<button type="button" class="btn btn-default navbar-btn">Forum</button>
 
-					<!-- Shop Button goes to shop page -->
-					<button type="button" class="btn btn-default navbar-btn"><a href="#/shop">Shop</a></button>
+					<!-- Button to shop page -->
+					<a href="#/shop"><button type="button" class="btn btn-default navbar-btn">Shop</button></a>
 
 					<!-- Links to facebook and twitter -->
-					<a class="navbar-right fbPadding" href="https://www.facebook.com/Protectorfanzsite"><i class="fa fa-facebook"></i></a>
+					<a class="navbar-right fbPadding" href="https://www.facebook.com/Protectorfanzsite"><i class="fa fa-facebook-official"></i></a>
 					<a class="navbar-right fbPadding" href="https://twitter.com/Protector_KMH"><i class="fa fa-twitter-square"></i></a>
 				</div>
 			</div>
 		</nav>
 		<!-- End Navbar code -->
 
-		<div class="view-container">
+		{{hi}}
+
+		<div class="mainBody">
 		      <ng-view></ng-view>
     	</div>
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
-		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.js'></script>
+		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js'></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

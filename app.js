@@ -4,11 +4,11 @@ app.config(function($routeProvider) {
 
 	$routeProvider
 	.when('/', {
-		templateUrl: '/homeTmpl.html',
+		templateUrl: 'homeTmpl.html',
 		controller: 'mainCtrl'
 	})
 	.when('/shop', {
-		templateUrl: '/shop.html',
+		templateUrl: 'shop.html',
 		controller: 'shopCtrl'
 	})
 	.otherwise({

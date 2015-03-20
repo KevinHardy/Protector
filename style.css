@@ -38,6 +38,7 @@ html, body {
 }
 /*End NavBar Code*/
 
+/*primary div class where all html data will sit inside*/
 .mainBody {
 	background-color: #3A3C3A;
 	color: white;
@@ -45,6 +46,7 @@ html, body {
 	margin-left: 5%;
 	margin-top: 5%;
 	opacity: 0.8;
+	padding-bottom: 20px;
 }
 
 .title {
@@ -56,6 +58,13 @@ html, body {
 
 p {
 	font-size: 12px;
+}
+
+/*image for shop page*/
+.shopImg {
+	padding: 20px;
+	background-color: white;
+	vertical-align: center;
 }
 
 .stone {
