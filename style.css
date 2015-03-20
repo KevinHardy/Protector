@@ -46,6 +46,8 @@ html, body {
 	margin-left: 5%;
 	margin-top: 5%;
 	opacity: 0.8;
+	padding-right: 20px;
+	padding-left: 20px;
 	padding-bottom: 20px;
 }
 
@@ -56,15 +58,29 @@ html, body {
 	border-bottom: 4px solid black;
 }
 
+.pageIntro {
+	justify-content: center;
+}
+
 p {
 	font-size: 12px;
 }
 
-/*image for shop page*/
+/*shop page*/
+
+.shopBody {
+	margin: 20px;
+}
+
 .shopImg {
 	padding: 20px;
 	background-color: white;
 	vertical-align: center;
+	float: left;
+}
+
+.shopContent {
+	margin: 20px;
 }
 
 .stone {
