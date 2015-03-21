@@ -67,7 +67,6 @@ p {
 }
 
 /*shop page*/
-
 .shopBody {
 	margin: 20px;
 }
@@ -75,7 +74,7 @@ p {
 .shopImg {
 	padding: 20px;
 	background-color: white;
-	vertical-align: center;
+/*	vertical-align: center;*/
 	float: left;
 }
 

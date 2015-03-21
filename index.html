@@ -15,10 +15,10 @@
 				<div class="navbar-header navbar-left">
 					<a class="navbar-brand" href="#/">K.M. Hardy</a>
 					<!-- Sign in button goes to sign in page -->
-					<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+					<a href="#/logIn"><button type="button" class="btn btn-default navbar-btn">Sign in</button></a>
 
 					<!-- button to forum -->
-					<button type="button" class="btn btn-default navbar-btn">Forum</button>
+					<a href="#/Forum"><button type="button" class="btn btn-default navbar-btn">Forum</button></a>
 
 					<!-- Button to shop page -->
 					<a href="#/shop"><button type="button" class="btn btn-default navbar-btn">Shop</button></a>
@@ -39,8 +39,17 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js'></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="//cdn.firebase.com/js/client/1.1.0/firebase.js"></script>
+		<script type="text/javascript" src="//cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
-		<script src="shopCtrl.js"></script>
+		<script src="shop/shopCtrl.js"></script>
+		<script src="Login/loginCtrl.js"></script>
+		<script src="Login/loginService.js"></script>
+		<script src="Login/authService.js"></script>
+		<script src="Forum/forumCtrl.js"></script>
+		<script src="Forum/forumService.js"></script>
 	</body>
 </html>
+
+<!-- ctrl shift v -->
