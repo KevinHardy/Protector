@@ -82,6 +82,10 @@ p {
 	margin: 20px;
 }
 
+.forumFont {
+	color: black;
+}
+
 .stone {
 	background-color: #3A3C3A;
 	position: fixed;
