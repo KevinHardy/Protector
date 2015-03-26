@@ -1,7 +1,7 @@
 <div class="jumbotron col-md-6 col-md-offset-3 dash-head">
     <a href="" ng-click="showReg()">{{status}}</a>
     <div ng-show="!reg">
-        <h2>Login</h2>
+        <h2 class="forumFont">Login</h2>
         <form ng-submit="login()">
             <p ng-show="error" class="text-danger">{{ error }}</p>
             <input type="email" placeholder="Email" class="form-control" ng-model="details.email" required><br>
@@ -10,7 +10,7 @@
         </form>
     </div>
     <div ng-show="reg">
-        <h2>Register</h2>
+        <h2 class="forumFont">New fan? Register here</h2>
         <!-- Step One Of Registration-->
         <form ng-submit="register()">
             <p ng-show="error" class="text-danger">{{ error }}</p>
