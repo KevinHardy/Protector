@@ -5,7 +5,7 @@ app.controller('LogInCtrl', function ($scope, authService, $location) {
   var loginCallback = function(user){
     user.uid = user.uid.replace('simplelogin:', '');
     $scope.$apply(function(){
-      $location.path('/dashboard/' + user.uid)
+      $location.path('/Forum/' + user.uid)
     });
   };
 

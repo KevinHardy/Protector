@@ -2,7 +2,7 @@ var app = angular.module('ProtectorApp');
 
 app.controller('forumCtrl', function($scope) {
 
-	//$scope.test = "Welcome to the Protector Forum Clone!";
+	//$scope.test = "Welcome to the Protector Forum!";
 	$scope.posts = [];
 
 	$scope.addPost = function() {
