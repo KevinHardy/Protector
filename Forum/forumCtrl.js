@@ -25,4 +25,4 @@ app.controller('forumCtrl', function($scope) {
 		$scope.posts[index].commentForm = '';
 	}
 
-})
+});

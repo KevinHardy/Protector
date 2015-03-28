@@ -2,7 +2,7 @@ var app = angular.module('ProtectorApp');
 
 app.service('authService', function(){
   //Just a reference to the firebase endpoint
-  var firebaseUrl = 'https://kmhardy-books.firebaseio.com/';
+  var firebaseUrl = 'https://kmhardy-books.firebaseio.com/Protector';
   //Creates an object using the Firebase Constructor with our endpoint passed in
   var firebaseLogin = new Firebase(firebaseUrl);
 

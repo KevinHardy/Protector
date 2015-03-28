@@ -5,32 +5,32 @@
 	<div class="row forumFont">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-						<div class="panel-heading">
-							Submit new Posts
+				<div class="panel-heading">
+					Submit new Posts
+				</div>
+				<div class="panel-body">
+					<form class="form" ng-submit="addPost()">
+						<div class="form-group">
+							<label>Title</label>
+							<input type="text" class="form-control" placeholder="title" ng-model="newPost.title">
 						</div>
-						<div class="panel-body">
-							<form class="form" ng-submit="addPost()">
-								<div class="form-group">
-									<label>Title</label>
-									<input type="text" class="form-control" placeholder="title" ng-model="newPost.title">
-								</div>
-								<div class="form-group">
-									<label>Body</label>
-									<textarea type="text" class="form-control" placeholder="body" ng-model="newPost.body"></textarea>
-								</div>
-							</form>
+						<div class="form-group">
+							<label>Body</label>
+							<textarea type="text" class="form-control" placeholder="body" ng-model="newPost.body"></textarea>
 						</div>
-						<div class="panel-footer">
-							<div class="row">
-								<div class="col-md-6">
-									<button class="btn btn-info btn-block" ng-click="addPost()">Post!</button>
-								</div>
-								<div class="col-md-6">
-									<button class="btn btn-default btn-block" ng-click="reset()">Cancel Post</button>
-								</div>
-							</div>
+					</form>
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-md-6">
+							<button class="btn btn-info btn-block" ng-click="addPost()">Post!</button>
+						</div>
+						<div class="col-md-6">
+							<button class="btn btn-default btn-block" ng-click="reset()">Cancel Post</button>
 						</div>
 					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row forumFont">
