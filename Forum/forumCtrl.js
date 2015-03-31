@@ -1,6 +1,15 @@
 var app = angular.module('ProtectorApp');
 
-app.controller('forumCtrl', function($scope) {
+app.controller('forumCtrl', /*'ForumService',*/ function($scope /*ForumService*/) {
+
+	
+	var ref = new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp");
+	/*var authData = ref.getAuth();
+
+	if (authData) {
+		console.log("Authenticated user with uid:", authData.uid);
+		//$scope.getUser(authData.uid);
+	}*/
 
 	//$scope.test = "Welcome to the Protector Forum!";
 	$scope.posts = [];

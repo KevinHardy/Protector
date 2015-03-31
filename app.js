@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
 	})
 	.when('/logIn', {
 		templateUrl: '/Login/logInTmpl.html',
-		controller: 'LogInCtrl'
+		controller: 'logInCtrl'
 	})
 	.when('/Forum', {
 		templateUrl: '/Forum/forumTmpl.html',
@@ -30,7 +30,7 @@ app.config(function($routeProvider) {
 	})
 });
 
-app.run(["$rootScope", "$location", function($rootScope, $location) {
+/*app.run(["$rootScope", "$location", function($rootScope, $location) {
 	$rootScope.$on("$routeChangeError", function(event, next, previous, error) {
 		// We can catch the error thrown when the $requireAuth promise is rejected
 		// and redirect the user back to the home page
@@ -38,4 +38,4 @@ app.run(["$rootScope", "$location", function($rootScope, $location) {
 			$location.path("/Login");
 		}
 	});
-}]);
+}]);*/

@@ -10,7 +10,7 @@
 	<body>
 
 		<!-- Navbar code -->
- 		<nav class="navbar navbar-default stone">
+ 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header navbar-left">
 					<a class="navbar-brand" href="#/">K.M. Hardy</a>
@@ -28,27 +28,29 @@
 					<a class="navbar-right fbPadding" href="https://twitter.com/Protector_KMH" target="_blank"><i class="fa fa-twitter-square"></i></a>
 
 					<!-- show which user is logged in -->
+					<p class="navbar-right fbPadding">Logged in as: {{ $scope.details.name }}</p>
 				</div>
 			</div>
 		</nav>
 		<!-- End Navbar code -->
 
 		<div class="mainBody">
-		      <ng-view></ng-view>
+			<ng-view></ng-view>
     	</div>
+
+		<!-- posting facebook at twitter most recent posts -->
+		<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js'></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="//cdn.firebase.com/js/client/1.1.0/firebase.js"></script>
-		<script type="text/javascript" src="//cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
-		<script src="shop/shopCtrl.js"></script>
+		<script src="Shop/shopCtrl.js"></script>
 		<script src="Login/loginCtrl.js"></script>
-		<script src="Login/loginService.js"></script>
-		<script src="Login/authService.js"></script>
 		<script src="Forum/forumCtrl.js"></script>
 		<script src="Forum/forumService.js"></script>
 	</body>

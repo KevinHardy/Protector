@@ -59,7 +59,7 @@ html, body {
 }
 
 .pageIntro {
-	justify-content: center;
+	text-align: center;
 }
 
 p {
@@ -80,6 +80,10 @@ p {
 
 .shopContent {
 	margin: 20px;
+}
+
+.postBorder {
+	border: 2px solid #424242;
 }
 
 .forumFont {
