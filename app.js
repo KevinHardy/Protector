@@ -17,13 +17,7 @@ app.config(function($routeProvider) {
 	})
 	.when('/Forum', {
 		templateUrl: '/Forum/forumTmpl.html',
-		controller: 'forumCtrl',
-		/*resolve: {
-			"currentAuth": ["Auth", function(Auth) {
-		    // $waitForAuth returns a promise so the resolve waits for it to complete
-		    return Auth.$waitForAuth();
-    		}]
-		}*/
+		controller: 'forumCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'

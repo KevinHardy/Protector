@@ -1,6 +1,6 @@
 <h1 class="title">Login here to use forum</h1>
 <div>
-    <div class="jumbotron col-md-6 col-md-offset-3 dash-head">
+    <div class="loginPage">
         <a href="" ng-click="showReg()">{{status}}</a>
         <div ng-show="!reg">
             <h2 class="forumFont">Login</h2>
@@ -15,7 +15,7 @@
             <h2 class="forumFont">New fan? Register here</h2>
             <form ng-submit="register()">
                 <p ng-show="error" class="text-danger">{{ error }}</p>
-                <input class="form-control" type="text" placeholder="Name" ng-model="details.name" required /><br />
+                <input class="form-control" type="text" placeholder="Name (you may use your name or a chat name)" ng-model="details.name" required /><br />
                 <input class="form-control" type="email" placeholder="Email" ng-model="details.email" required /><br />
                 <input class="form-control" type="password" placeholder="Password" ng-model="details.password" required /><br />
                 <input type="submit" class="btn btn-info btn-lg" value="Register" />

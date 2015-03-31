@@ -61,6 +61,7 @@ html, body {
 .pageIntro {
 	text-align: center;
 }
+/*end code for primary div class*/
 
 p {
 	font-size: 12px;
@@ -81,9 +82,17 @@ p {
 .shopContent {
 	margin: 20px;
 }
+/*end shop ppage*/
 
+/*code for the Forum page, making text visible, and specifying text if user isn't logged in*/
 .postBorder {
-	border: 2px solid #424242;
+	border-left: 2px solid #424242;
+	border-right: 2px solid #424242;
+	padding: 2px;
+}
+
+.borderTop {
+	border-top: 2px solid #424242;
 }
 
 .forumFont {
@@ -94,6 +103,20 @@ p {
 	color: red;
 	text-align: center;
 }
+/*end forum code*/
+
+/*code for login page*/
+.loginPage {
+	margin-left: 30%;
+	margin-right: 30%;
+	background-color: white;
+	padding: 10px;
+
+}
+
+/*input {
+	max-width: 60%;
+}*/
 
 .stone {
 	background-color: #3A3C3A;

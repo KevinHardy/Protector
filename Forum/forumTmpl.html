@@ -11,23 +11,23 @@
 					Submit new Posts
 				</div>
 				<div class="panel-body">
-					<form class="form" ng-submit="addPost(title, body)">
+					<form class="form" ng-submit="addPost(newPost.title, newPost.body)">
 						<div class="form-group">
 							<label>Title</label>
-							<input type="text" class="form-control" placeholder="title" ng-model="title">
+							<input type="text" class="form-control" placeholder="title" ng-model="newPost.title">
 						</div>
 						<div class="form-group">
 							<label>Body</label>
-							<textarea type="text" class="form-control" placeholder="body" ng-model="body"></textarea>
+							<textarea type="text" class="form-control" placeholder="body" ng-model="newPost.body"></textarea>
 						</div>
 					</form>
 				</div>
 				<div class="panel-footer">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-2">
 							<button class="btn btn-info btn-block" ng-click="addPost()">Post!</button>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-2">
 							<button class="btn btn-default btn-block" ng-click="reset()">Cancel Post</button>
 						</div>
 					</div>
@@ -42,23 +42,25 @@
 					Recent Posts
 				</div>
 				<div class="panel-body">
-					<div ng-repeat="messages in messages">
-						<div class="postBorder">
-							<h3>{{messages.username}}</h3>
-							<h4>{{messages.title}}</h4>
-							<i>{{messages.timestamp | date : format : timezone}}</i>
-							<p>{{messages.body}}</p>
+					<div ng-repeat="post in posts">
+						<div class="borderTop postBorder">
+							<h3>{{post.username}}</h3>
+							<h4>{{post.title}}</h4>
+							<i>{{post.timestamp | date : format : timezone}}</i>
+							<p>{{post.body}}</p>
+							</br>
+							<p>Comments: </p>
 						</div>
-						<div ng-repeat="comment in messages.comments track by $index">
+						<div class="postBorder" ng-repeat="comment in post.comments track by $index">
 							{{comment}}
 						</div>
-						<form ng-submit="submitComment($index, messages.commentForm)">
+						<form class="borderTop" ng-submit="submitComment($index, post.commentForm)">
 							<div class="form-group">
-								<textarea class="form-control" placeholder="comment" ng-model="messages.commentForm"></textarea>
+								<textarea class="form-control" placeholder="comment" ng-model="post.commentForm"></textarea>
 								<button class="btn btn-info btn-block">Submit</button>
 							</div>
 						</form>
-						<!-- <div ng-repeat="comment in messages.comments track by $index">
+						<!-- <div ng-repeat="comment in post.comments track by $index">
 							{{comment}}
 						</div> -->
 					</div>
