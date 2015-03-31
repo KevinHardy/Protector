@@ -14,8 +14,10 @@
 			<div class="container-fluid">
 				<div class="navbar-header navbar-left">
 					<a class="navbar-brand" href="#/">K.M. Hardy</a>
-					<!-- Sign in button -->
-					<a href="#/logIn"><button type="button" class="btn btn-success navbar-btn">Sign in</button></a>
+					<!-- Sign in and out buttons -->
+					<a href="#/logIn"><button ng-show="!isLoggedIn" type="button" class="btn btn-success navbar-btn">Sign in</button></a>
+
+					<a href="#/logIn"><button ng-show="isLoggedIn" ng-controller="logInCtrl" type="button" class="btn btn-danger navbar-btn" ng-click="signOut()">Sign Out</button></a>
 
 					<!-- button to forum -->
 					<a href="#/Forum"><button type="button" class="btn btn-success navbar-btn">Forum</button></a>
@@ -28,7 +30,8 @@
 					<a class="navbar-right fbPadding" href="https://twitter.com/Protector_KMH" target="_blank"><i class="fa fa-twitter-square"></i></a>
 
 					<!-- show which user is logged in -->
-					<p class="navbar-right fbPadding">Logged in as: {{ $scope.details.name }}</p>
+					<!-- <p ng-controller="logInCtrl" class="navbar-right fbPadding">Logged in as: {{ $scope.details.name }}</p> -->
+
 				</div>
 			</div>
 		</nav>
@@ -45,7 +48,7 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js'></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-		<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 		<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

@@ -1,12 +1,7 @@
 var app = angular.module('ProtectorApp');
 
-/*app.service('ForumService', function($firebase) {
+app.service('forumService', function($firebase) {
 
-	var ref = 'https://kmhardy-books.firebaseIO.com/ProtectorApp';
+	this.isLoggedIn = false;
 
-	this.getUser = function(){
-		//var useruid = ref.getAuth().uid
-		return $firebase(new Firebase(ref + 'users/' + useruid));
-	};
-
-})*/
+})

@@ -1,21 +1,24 @@
 	<h1 class="title">Protector Forum Fan Page</h1>
 	<p>Dear Protector fans, please refrain from bullying other users as well as the use of bad language.  Any misuse of our Fan Website will be reported and the person(s) responsible will be notified. This forum is intended to be a safe place for friendly chat/discussion and bullying will absolutely not be tolerated.  If there are any suspicious/malicious entries that you find, please feel free to email management at KMHardy.Protectorfansite@yahoo.com.</p>
 	<p>Thank you for your cooperation.</p>
-	<div class="row forumFont">
+	<div ng-show="!isLoggedIn">
+		<h4 class="notLogged">Uh oh! You are not logged in yet, go to the Login page to submit posts to the forum!</h4>
+	</div>
+	<div class="row forumFont" ng-show="isLoggedIn">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					Submit new Posts
 				</div>
 				<div class="panel-body">
-					<form class="form" ng-submit="addPost()">
+					<form class="form" ng-submit="addPost(title, body)">
 						<div class="form-group">
 							<label>Title</label>
-							<input type="text" class="form-control" placeholder="title" ng-model="newPost.title">
+							<input type="text" class="form-control" placeholder="title" ng-model="title">
 						</div>
 						<div class="form-group">
 							<label>Body</label>
-							<textarea type="text" class="form-control" placeholder="body" ng-model="newPost.body"></textarea>
+							<textarea type="text" class="form-control" placeholder="body" ng-model="body"></textarea>
 						</div>
 					</form>
 				</div>
@@ -39,22 +42,23 @@
 					Recent Posts
 				</div>
 				<div class="panel-body">
-					<div ng-repeat="post in posts">
+					<div ng-repeat="messages in messages">
 						<div class="postBorder">
-							<h3>{{post.title}}</h3>
-							<i>{{post.timestamp | date : format : timezone}}</i>
-							<p>{{post.body}}</p>
+							<h3>{{messages.username}}</h3>
+							<h4>{{messages.title}}</h4>
+							<i>{{messages.timestamp | date : format : timezone}}</i>
+							<p>{{messages.body}}</p>
 						</div>
-						<div ng-repeat="comment in post.comments track by $index">
+						<div ng-repeat="comment in messages.comments track by $index">
 							{{comment}}
 						</div>
-						<form ng-submit="submitComment($index, post.commentForm)">
+						<form ng-submit="submitComment($index, messages.commentForm)">
 							<div class="form-group">
-								<textarea class="form-control" placeholder="comment" ng-model="post.commentForm"></textarea>
+								<textarea class="form-control" placeholder="comment" ng-model="messages.commentForm"></textarea>
 								<button class="btn btn-info btn-block">Submit</button>
 							</div>
 						</form>
-						<!-- <div ng-repeat="comment in post.comments track by $index">
+						<!-- <div ng-repeat="comment in messages.comments track by $index">
 							{{comment}}
 						</div> -->
 					</div>

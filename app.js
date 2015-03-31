@@ -28,7 +28,11 @@ app.config(function($routeProvider) {
 	.otherwise({
 		redirectTo: '/'
 	})
+})
+.run(function($rootScope) {
+	$rootScope.isLoggedIn = false;
 });
+//.value("isLoggedIn", false);
 
 /*app.run(["$rootScope", "$location", function($rootScope, $location) {
 	$rootScope.$on("$routeChangeError", function(event, next, previous, error) {

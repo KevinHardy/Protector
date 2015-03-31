@@ -90,6 +90,11 @@ p {
 	color: black;
 }
 
+.notLogged {
+	color: red;
+	text-align: center;
+}
+
 .stone {
 	background-color: #3A3C3A;
 	position: fixed;
