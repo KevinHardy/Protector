@@ -73,6 +73,7 @@ p {
 }
 
 .shopImg {
+	background: url("PROTECTOR-COVER.jpg")
 	padding: 20px;
 	background-color: white;
 /*	vertical-align: center;*/
