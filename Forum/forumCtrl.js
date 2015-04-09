@@ -20,21 +20,25 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 
 	$scope.isLoggedIn = $rootScope.isLoggedIn;
 
-	$scope.posts = [];
-	/*var messages = $firebaseArray(new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages"));
-	$scope.posts = messages;*/
+	//$scope.posts = [];
+	var messages = $firebaseArray(new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages"));
+	$scope.posts = messages;
 
 	//var messagesRef = new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages")
 
 	$scope.addPost = function(title, body) {
 		//console.log($rootScope.isLoggedIn);
 		//$scope.newPost.name = username;
+		
 		$scope.newPost.timestamp = Date.now();
 		$scope.newPost.comments = [];
 		
-		$scope.posts.push($scope.newPost)
+		/*$scope.posts.push($scope.newPost)
 
-		console.log($scope.posts);
+		console.log($scope.posts);*/
+
+		messages.$add($scope.newPost);
+
 		//console.log($scope.newPost);
 
 		$scope.reset();
@@ -45,7 +49,11 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 	}
 
 	$scope.submitComment = function(index, comment) {
-		$scope.posts[index].comments.push(comment);
+		var comments = $firebaseArray(new firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages" + index + "/comments"))
+
+		//$scope.posts[index].comments.push(comment);
+		comments.$add(comment);
+
 		$scope.posts[index].commentForm = '';
 	}
 
