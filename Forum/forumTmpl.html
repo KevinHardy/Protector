@@ -55,10 +55,10 @@
 						<div class="postBorder" ng-repeat="comment in post.comments track by $index">
 							{{comment}}
 						</div>
-						<form class="borderTop" ng-submit="submitComment($index, post.commentForm)">
+						<form ng-show="isLoggedIn" class="borderTop" ng-submit="submitComment($index, post.commentForm)">
 							<div class="form-group">
 								<textarea class="form-control" placeholder="comment" ng-model="post.commentForm"></textarea>
-								<button class="btn btn-info btn-block">Submit</button>
+								<button class="btn btn-info btn-block btn-large">Submit</button>
 							</div>
 						</form>
 						<!-- <div ng-repeat="comment in post.comments track by $index">
@@ -69,7 +69,7 @@
 				<div class="panel-footer">
 					<!-- <div class="row">
 						<div class="col-md-6">
-							<button ng-click="submitComment($index, post.commentForm)" class="btn btn-info btn-block">Submit</button>
+							<button ng-click="submitComment()" class="btn btn-info btn-block">Submit</button>
 						</div>
 					</div> -->
 				</div>
