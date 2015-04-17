@@ -1,7 +1,7 @@
 	<h1 class="title">Protector Forum Fan Page</h1>
 	<p>Dear Protector fans, please refrain from bullying other users as well as the use of bad language.  Any misuse of our Fan Website will be reported and the person(s) responsible will be notified. This forum is intended to be a safe place for friendly chat/discussion and bullying will absolutely not be tolerated.  If there are any suspicious/malicious entries that you find, please feel free to email management at KMHardy.Protectorfansite@yahoo.com.</p>
 	<p>Thank you for your cooperation.</p>
-	<h2 class="notLogged">Sorry folks, but the forum isn't working right now! Please check back and we'll get it running ASAP! In the meantime please visit our <a href="https://www.facebook.com/Protectorfanzsite" target="_blank">facebook</a> and <a href="https://twitter.com/Protector_KMH" target="_blank">twitter</a> pages!</h2>
+	<h2 class="notLogged">Hey folks, your username doesn't want to display right now, while the web coders fix it, please type your username in the title please.  Thanks!</h2>
 	<div ng-show="!isLoggedIn">
 		<h4 class="notLogged">Uh oh! You are not logged in yet, go to the Login page to submit posts to the forum!</h4>
 	</div>
@@ -45,14 +45,14 @@
 				<div class="panel-body">
 					<div ng-repeat="post in posts">
 						<div class="borderTop postBorder">
-							<h3>{{post.username}}</h3>
-							<h4>{{post.title}}</h4>
+							<!-- <h5>User: {{post.username}}</h5> -->
+							<h5>Title: {{post.title}}</h5>
+							<h4>{{post.body}}</h4>
 							<i>{{post.timestamp | date : format : timezone}}</i>
-							<p>{{post.body}}</p>
-							</br>
-							<p>Comments: </p>
+							<!-- </br>
+							<p>Comments: </p> -->
 						</div>
-						<div class="postBorder" ng-repeat="comment in post.comments track by $index">
+						<!-- <div class="postBorder" ng-repeat="comment in post.comments track by $index">
 							{{comment}}
 						</div>
 						<form ng-show="isLoggedIn" class="borderTop" ng-submit="submitComment($index, post.commentForm)">
@@ -60,8 +60,8 @@
 								<textarea class="form-control" placeholder="comment" ng-model="post.commentForm"></textarea>
 								<button class="btn btn-info btn-block btn-large">Submit</button>
 							</div>
-						</form>
-						<!-- <div ng-repeat="comment in post.comments track by $index">
+						</form> -->
+						<!-- don't use this code! not working <div ng-repeat="comment in post.comments track by $index">
 							{{comment}}
 						</div> -->
 					</div>

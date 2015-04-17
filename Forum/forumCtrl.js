@@ -4,19 +4,8 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 
 	//$scope.test = "Welcome to the Protector Forum!";
 
-	var ref = new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/users");
-	/*var user = ref.getAuth();
-	var username = ref.child('name');
-	username.once('value', function(snap) {
-		var user = snap.val();
-		if (!user) {
-			return;
-		}
-
-		form.find('#name').val(user.name);
-		form.find('#posts').val(user.posts);
-		form.find('#comments').val(user.comments);
-	})*/
+	//var ref = new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/users");
+	$scope.user = $rootScope.user;
 
 	$scope.isLoggedIn = $rootScope.isLoggedIn;
 
@@ -29,7 +18,8 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 
 	$scope.addPost = function(title, body) {
 		//console.log($rootScope.isLoggedIn);
-		//$scope.newPost.name = username;
+		//console.log($rootScope.user);
+		//$scope.newPost.username = $rootScope.user;
 		
 		$scope.newPost.timestamp = Date.now();
 		$scope.newPost.comments = [];
