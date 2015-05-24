@@ -19,11 +19,13 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 	$scope.addPost = function(title, body) {
 		//console.log($rootScope.isLoggedIn);
 		//console.log($rootScope.user);
-		//$scope.newPost.username = $rootScope.user;
+		$scope.newPost.username = $rootScope.user;
 		
 		$scope.newPost.timestamp = Date.now();
-		$scope.newPost.comments = [];
+		//$scope.newPost.comments = [];
 		//$scope.newPost.index = index++;
+
+		var comments = $firebaseArray(new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages/comments"));
 
 		messages.$add($scope.newPost);
 
@@ -38,7 +40,7 @@ app.controller('forumCtrl', ["$scope", "$firebase", "$firebaseArray", "forumServ
 
 /*I am getting an error saying this is not a function*/
 	$scope.submitComment = function(index, comment) {
-		var comments = $firebaseArray(new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages" + index + "/comments"));
+		//var comments = $firebaseArray(new Firebase("https://kmhardy-books.firebaseIO.com/ProtectorApp/messages" + index + "/comments"));
 
 		//$scope.posts[index].comments.push(comment);
 		comments.$add(comment);
